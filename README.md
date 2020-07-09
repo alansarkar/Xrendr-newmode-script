@@ -1,5 +1,5 @@
-# Xrendr-newmode-script
-Add any screen size or refresh rate  you want to your linux desktop
+
+## Add any screen size or refresh rate  you want to your linux desktop
 
 # Easy download & ready to use 
 Run this command on your terminal and the script is ready to be use: <br>
