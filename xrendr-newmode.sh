@@ -17,12 +17,14 @@ x=$1
 y=$2
 z=$3 
 
+## get default output
+out="$(xrandr | head -2 | tail -1 | cut -d' ' -f1)"
 
 #function xrandr_mode() {
 cvt "$x" "$y" "$z"  | tail -1 | cut -d' ' -f2-40 > /tmp/xrandr-mode  
 xrandr --newmode  "$x"x"$y"_"$z" $(cat /tmp/xrandr-mode | cut -d' ' -f3-20)
-  xrandr --addmode eDP1 "$x"x"$y"_"$z"
-  xrandr --output eDP1 --mode "$x"x"$y"_"$z"
+  xrandr --addmode "$out" "$x"x"$y"_"$z"
+  xrandr --output "$out" --mode "$x"x"$y"_"$z"
 #}
 
 #xrandr_mode $x $y $z
