@@ -16,7 +16,6 @@ else
 x=$1
 y=$2
 z=$3 
-
 ## get default output
 out="$(xrandr | head -2 | tail -1 | cut -d' ' -f1)"
 
